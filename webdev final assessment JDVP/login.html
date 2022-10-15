@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itachi  |  Sign Up</title>
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" size="32x32">
+	<link rel="stylesheet" type="text/css" href="loginStyle.css">
+	<link rel="stylesheet" type="text/css" href="loginStyle2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="loginJS.js"></script>
+    <link rel="stylesheet" href="loginStyle.css">
+</head>
+<body>
+    
+<script>
+
+    function validateform(){  
+    var username=document.myform.username.value; 
+    var email=document.myform.email.value;  
+    var password=document.myform.password.value; 
+    var password2=document.myform.password2.value;  
+
+    if(username == '') {
+        alert('Username is required');
+        return false;  
+    }
+    else if(email == '') {
+        alert('Email is required');
+        return false;  
+    } 
+    else if(password == '') {
+        alert('Password is required');
+        return false;  
+    } 
+    else if (password.length < 8 ) {
+        alert('Password must be at least 8 character.');
+        return false;  
+    }
+    else if(password2 == '') {
+        alert('Please confirm your password');
+        return false;  
+    } 
+    else if (password2 !== password) {
+        alert("Passwords doesn't match");
+        return false;  
+    }
+    }
+
+</script>
+
+<img class="wave" src="img/wave - Copy.png">
+<div class="container">
+
+    <div class="img">
+        <img src="./img/Login-cuate (2).png">
+    </div>
+
+
+    <div class="container">
+        
+        <form id="form" name="myform" method="post" action="Home.html" onsubmit="return validateform()" >
+            <h1>Create Account</h1>
+            <div class="input-control">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" placeholder="bambam17">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="abrahamabit@gmail.com">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input id="password"name="password" type="password" placeholder="must be 8 characters">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password2">Confirm password</label>
+                <input id="password2"name="password2" type="password">  
+                <div class="error"></div>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+<!--
+
+        function validateform(){  
+    var username=document.myform.username.value; 
+    var email=document.myform.email.value;  
+    var password=document.myform.password.value; 
+    var password2=document.myform.password2.value;  
+      
+    if (username =="" || email == '' || password == '' || password2 == ''){  
+      alert("Name can't be blank");  
+      return false;  
+    }else if(password.length<6){  
+      alert("Password must be at least 6 characters long.");  
+      return false;  
+      }  
+    } 
+
+-->
+
+
+
+
+
+
+
+
+
+
+
